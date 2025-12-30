@@ -18,9 +18,10 @@ if uploaded is not None:
         img = Image.open(uploaded).convert("RGB")
         st.image(img,caption='uploaded image',use_column_width=True)
 
-        with spinner('Detecting....'):
+        with st.spinner('Detecting....'):
             pred = model.predict(img)
             result_img = pred[0].plot()[ :,:,::-1]
             st.image(result_img,caption='Detected image',use_container_width=True)
 
         
+
