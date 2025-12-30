@@ -9,7 +9,7 @@ model = load_model()
 
 st.set_page_config(page_title="Helmet Detection Model", page_icon="🪖")
 
-st.title("🪖 License Plate Recognition")
+st.title("🪖Helmet Detection")
 st.write("Upload an image of helmet to recognize detect helmet.")
 uploaded = st.file_uploader('Choose an image...',type=['jpg','jpeg','png'])
 
@@ -24,5 +24,6 @@ if uploaded is not None:
             st.image(result_img,caption='Detected image',use_container_width=True)
 
         
+
 
 
