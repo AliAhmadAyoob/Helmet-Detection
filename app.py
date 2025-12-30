@@ -16,7 +16,7 @@ uploaded = st.file_uploader('Choose an image...',type=['jpg','jpeg','png'])
 if uploaded is not None:
     if uploaded.type.startswith('image'):
         img = Image.open(uploaded).convert("RGB")
-        st.image(img,caption='uploaded image',use_column_width=True)
+        # st.image(img,caption='uploaded image',use_column_width=True)
 
         with st.spinner('Detecting....'):
             pred = model.predict(img)
@@ -24,4 +24,5 @@ if uploaded is not None:
             st.image(result_img,caption='Detected image',use_container_width=True)
 
         
+
 
